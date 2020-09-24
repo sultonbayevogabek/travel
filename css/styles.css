@@ -1,0 +1,413 @@
+/*===============================================*\
+                  general styles
+\*===============================================*/
+* {
+   box-sizing: border-box;
+}
+a {
+   text-decoration: none;
+}
+ul {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+   margin: 0;
+}
+input, button {
+   border: none;
+}
+input:focus, button:focus {
+   outline: 2px solid rgba(253, 79, 50, 0.7);
+}
+body {
+   font-family: "Open Sans", sans-serif;
+}
+.container {
+   max-width: 1030px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+.hide {
+   display: none!important;
+}
+.show-nav {
+   right: 0;
+}
+.hide-nav {
+   right: -100%;
+}
+.flex-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+/*===============================================*\
+               styles section intro
+\*===============================================*/
+.intro {
+   min-height: 600px;
+   background-image: url("../img/bgheader.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+}
+.site-header {
+   padding-top: 30px;
+}
+.site-logo {
+   display: flex;
+   align-items: center;
+}
+.site-logo__image {
+   margin-right: 10px;
+   transform: translateY(2px);
+}
+.site-logo__text {
+   font-size: 32px;
+   font-weight: 300;
+   line-height: 1;
+   letter-spacing: 1.2px;
+   color: #ffffff;
+}
+.menu-bar {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 24px;
+   height: 17px;
+   cursor: pointer;
+   transform: translateY(3px);
+}
+.menu-bar__item {
+   width: 24px;
+   height: 3px;
+   background-color: #ffffff;
+}
+.intro-search {
+   padding-top: 210px;
+   text-align: center;
+}
+.intro-search__question {
+   margin-bottom: 30px;
+   font-size: 52px;
+   font-weight: 300;
+   letter-spacing: 2.4px;
+   color: #ffffff;
+}
+.intro-search__form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.intro-search__input {
+   width: 325px;
+   height: 40px;
+   padding: 12px;
+}
+.intro-search__input::placeholder {
+   font-size: 16px;
+   font-weight: 400;
+   letter-spacing: 0.6px;
+   color: #8b8b8b;
+}
+.intro-search__submit {
+   width: 120px;
+   height: 40px;
+   padding: 12px;
+   font-size: 16px;
+   font-weight: 600;
+   letter-spacing: 0.6px;
+   text-transform: uppercase;
+   color: #ffffff;
+   background-color: #fd4f32;
+   cursor: pointer;
+}
+.intro-search__submit:hover {
+   filter: saturate(200%);
+}
+.site-nav {
+   position: fixed;
+   top: 0;
+   z-index: 2;
+   width: 25%;
+   height: 100vh;
+   background-color: rgba(253, 79, 50, 0.8);
+   transition: 0.6s;
+}
+.site-nav__link {
+   display: block;
+   padding: 30px;
+   font-size: 20px;
+   font-weight: 300;
+   line-height: 1;
+   letter-spacing: 1.2px;
+   color: #ffffff;
+   transition: 0.4s;
+}
+.site-nav__link:hover {
+   background-color: #ffffff;
+   color: #fd4f32;
+   box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.5);
+}
+.nav-close {
+   position: absolute;
+   top: 24px;
+   left: -66px;
+   width: 35px;
+   height: 35px;
+   padding: 5px;
+   border: 2px solid white;
+   text-align: center;
+   line-height: 20px;
+   border-radius: 50%;
+   font-size: 30px;
+   color: #ffffff;
+   cursor: pointer;
+   transition: 0.1s;
+   transform-origin: center center;
+}
+.nav-close:hover {
+   transform: rotate(90deg);
+   box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.5);;
+}
+.dark-layer {
+   position: fixed;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+}
+/*===============================================*\
+          styles section top destinations
+\*===============================================*/
+.destinations {
+   padding: 70px 0 55px;
+   background-color: #eeeeee;
+}
+.destinations__title {
+   margin-bottom: 10px;
+   font-family: "Montserrat", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 0.32px;
+   color: #323232;
+   text-transform: uppercase;
+}
+.destinations__about {
+   margin-bottom: 30px;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 0.3px;
+   color: #8b8b8b;
+}
+.row {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.destinations__card {
+   width: 240px;
+   margin-bottom: 15px;
+   background-color: #ffffff;
+   border-bottom: 2px solid #e1e0d8;
+}
+.destinations__card_header {
+   position: relative;
+}
+.destinations__card_price {
+   position: absolute;
+   right: 15px;
+   bottom: 15px;
+   font-family: "Montserrat", sans-serif;
+   font-size: 12px;
+   font-weight: 400;
+   letter-spacing: 0.24px;
+   color: #ffffff;
+}
+.destinations__card_body {
+   padding: 20px;
+}
+.destinations__card_title {
+   margin-bottom: 15px;
+   font-family: "Montserrat", sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   letter-spacing: 0.24px;
+   text-transform: uppercase;
+   color: #323232;
+}
+.destinations__card_about {
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 19px;
+   color: #696969;
+}
+/*===============================================*\
+          styles section before you leave
+\*===============================================*/
+.before-leave {
+   padding: 80px 0 65px;
+}
+.before-leave__title {
+   margin-bottom: 50px;
+   font-size: 52px;
+   font-weight: 300;
+   letter-spacing: 2px;
+   line-height: normal;
+   color: #323232;
+}
+.before-leave__column {
+   width: 29%;
+   margin-bottom: 15px;
+}
+.before-leave__subtitle {
+   margin-bottom: 15px;
+   font-family: "Montserrat", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 0.3px;
+   text-transform: uppercase;
+   color: #323232;
+}
+.before-leave__info {
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 22px;
+   letter-spacing: 0.3px;
+   color: #8b8b8b;
+}
+.get-deals {
+   padding-top: 70px;
+   text-align: center;
+}
+.get-deals .before-leave__subtitle {
+   margin-bottom: 25px;
+}
+.get-deals .intro-search__input {
+   background-color: #eeeeee;
+}
+/*===============================================*\
+               styles site footer
+\*===============================================*/
+.site-footer {
+   padding: 30px 0;
+   background-color: #eeeeee;
+}
+.copyright {
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 22px;
+   letter-spacing: 0.3px;
+   color: #8b8b8b;
+}
+.site-footer__nav_ul {
+   display: flex;
+   align-items: center;
+}
+.site-footer__nav_li:not(:last-child) {
+   margin-right: 15px;
+}
+.site-footer__nav_link {
+   font-family: "Montserrat", sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: normal;
+   letter-spacing: 0.3px;
+   text-transform: uppercase;
+   color: #323232;
+   transition: 0.2s;
+}
+.site-footer__nav_link:hover {
+   color: #fd4f32;
+}
+/*===============================================*\
+               styles responsive
+\*===============================================*/
+@media only screen and (max-width: 1025px) {
+   section {
+      padding: 20px 0!important;
+   }
+   .destinations__card {
+      width: 32%;
+   }
+   .destinations__card img {
+      width: 100%;
+      height: auto;
+   }
+}
+@media only screen and (max-width: 890px) {
+   .copyright, .site-footer__nav {
+      width: 100%;
+   }
+   .copyright {
+      margin-bottom: 5px;
+   }
+}
+@media only screen and (max-width: 778px) {
+   .destinations__card {
+      width: 48%;
+   }
+   .site-nav {
+      width: 30%;
+   }
+}
+@media only screen and (max-width: 700px) {
+   .before-leave__column {
+      width: 48%;
+   }
+}
+@media only screen and (max-width: 529px) {
+   .destinations__card {
+      width: 100%;
+   }
+   .site-nav {
+      width: 40%;
+   }
+   .before-leave__title {
+      font-size: 40px;
+      margin-bottom: 15px;
+   }
+   .before-leave__column {
+      width: 100%;
+   }
+   .get-deals {
+      padding-top: 15px;
+   }
+}
+@media only screen and (max-width: 400px) {
+   .intro-search {
+      padding-top: 150px;
+   }
+}
+@media only screen and (max-width: 361px) {
+   .before-leave__title {
+      font-size: 32px;
+   }
+   .site-footer__nav_ul {
+      flex-wrap: wrap;
+   }
+}
+@media only screen and (max-width: 353px) {
+   .intro-search__question {
+      font-size: 40px;
+   }
+   .get-deals .intro-search__form {
+      flex-wrap: wrap;
+   }
+   .get-deals .intro-search__input, .get-deals .intro-search__submit {
+      width: 100%;
+   }
+}
+@media only screen and (max-width: 300px) {
+   .site-nav {
+      width: 70%;
+   }
+}
